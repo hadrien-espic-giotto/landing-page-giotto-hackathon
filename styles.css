@@ -30,8 +30,24 @@ header {
 }
 
 a { color: inherit; text-decoration: none; }
-.wordmark { font-size: 27px; font-weight: 750; letter-spacing: -1.3px; }
-.wordmark span { color: var(--muted); font-weight: 400; }
+.wordmark {
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+  width: 210px;
+  aspect-ratio: 4.5;
+  overflow: hidden;
+}
+
+/* Hide the JPEG's white margins without altering the supplied artwork. */
+.wordmark img {
+  display: block;
+  position: absolute;
+  width: 133%;
+  height: auto;
+  left: -16.5%;
+  top: -51%;
+}
 .eyebrow { font-size: 11px; letter-spacing: 2px; color: var(--muted); }
 .intro { margin-top: 52px; }
 
@@ -79,4 +95,8 @@ a:focus-visible { outline: 3px solid #316a94; outline-offset: 5px; }
   .eyebrow { font-size: 10px; letter-spacing: 1.4px; }
   h1 { letter-spacing: -1.1px; }
   .actions { grid-template-columns: 1fr; gap: 24px; }
+}
+
+@media (max-width: 360px) {
+  .wordmark { width: 150px; }
 }
