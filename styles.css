@@ -83,8 +83,9 @@ h2 { margin: 0; font-size: 16px; font-weight: 600; }
 
 .primary { background: var(--blue); border-color: var(--blue); color: #fff; }
 .primary:hover { background: #15354e; }
-.submission { background: #f3f5f7; border-color: #dce3e8; color: var(--muted); cursor: not-allowed; }
-.backup, .status { display: block; margin: 12px 0 0; font-size: 12px; line-height: 1.5; color: var(--muted); }
+.submission { background: #f3f5f7; border-color: #dce3e8; color: var(--blue); }
+.submission:hover { background: #eaf0f4; border-color: #a7b5bf; }
+.backup { display: block; margin: 12px 0 0; font-size: 12px; line-height: 1.5; color: var(--muted); }
 .backup { width: fit-content; text-decoration: underline; text-underline-offset: 3px; }
 .backup:hover, .wordmark:hover { color: var(--blue); }
 a:focus-visible { outline: 3px solid #316a94; outline-offset: 5px; }
