@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="Welcome to the Giotto ARC workshop. Find the rules, open an editor, and submit your task.">
+    <meta name="description" content="Welcome to the Giotto ARC workshop. Create and submit a puzzle, then download your assigned team's task for human evaluation.">
     <title>Giotto · ARC workshop</title>
     <link rel="stylesheet" href="./styles.css">
+    <script src="./download.js" defer></script>
   </head>
   <body>
     <main class="welcome">
@@ -22,12 +23,6 @@
         <p>Design a puzzle frontier AI can't solve.</p>
       </section>
 
-      <section class="rules" aria-labelledby="rules-title">
-        <h2 id="rules-title">Workshop rules</h2>
-        <!-- Add the workshop rules here. -->
-        <p>Rules will be added here soon.</p>
-      </section>
-
       <section class="actions" aria-label="Workshop links">
         <div class="editor-action">
           <a class="button primary" href="https://hadrien-espic-giotto.github.io/arc-editor-giotto-hackathon/">Open the editor <span aria-hidden="true">↗</span></a>
@@ -37,6 +32,19 @@
           <a class="button submission" href="https://tally.so/r/xXeqrv">Submit JSON <span aria-hidden="true">↗</span></a>
           <a class="button submission" href="https://tally.so/r/A7Vgd0">Submit rule description <span aria-hidden="true">↗</span></a>
         </div>
+      </section>
+
+      <section class="task-download" aria-labelledby="download-title">
+        <h2 id="download-title">Download your assigned team's task</h2>
+        <p id="download-help">For human evaluation. Enter the file name, with or without .json.</p>
+        <form id="download-form">
+          <label for="task-filename">File name</label>
+          <div class="download-controls">
+            <input id="task-filename" name="filename" type="text" placeholder="FILE_NAME" aria-describedby="download-help" autocomplete="off" autocapitalize="none" spellcheck="false" required>
+            <button class="button primary" type="submit">Download JSON</button>
+          </div>
+          <p id="download-status" role="status" aria-live="polite"></p>
+        </form>
       </section>
     </main>
   </body>

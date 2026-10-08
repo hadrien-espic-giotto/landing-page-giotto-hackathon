@@ -60,9 +60,7 @@ h1 {
 }
 
 .intro p { margin: 18px 0 0; color: var(--muted); font-size: 17px; }
-.rules { margin-top: 34px; padding: 23px 0; border-block: 1px solid #dce3e8; }
 h2 { margin: 0; font-size: 16px; font-weight: 600; }
-.rules p { margin: 9px 0 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
 .actions { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 
 .button {
@@ -89,7 +87,17 @@ h2 { margin: 0; font-size: 16px; font-weight: 600; }
 .backup { display: block; margin: 12px 0 0; font-size: 12px; line-height: 1.5; color: var(--muted); }
 .backup { width: fit-content; text-decoration: underline; text-underline-offset: 3px; }
 .backup:hover, .wordmark:hover { color: var(--blue); }
-a:focus-visible { outline: 3px solid #316a94; outline-offset: 5px; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid #316a94; outline-offset: 5px; }
+
+.task-download { margin-top: 30px; padding-top: 22px; border-top: 1px solid #dce3e8; }
+.task-download p { margin: 8px 0 14px; color: var(--muted); font-size: 13px; line-height: 1.5; }
+.task-download label { display: block; margin-bottom: 7px; font-size: 13px; font-weight: 600; }
+.download-controls { display: flex; gap: 10px; }
+.download-controls input { flex: 1; min-width: 0; padding: 11px 12px; border: 1px solid #a7b5bf; border-radius: 7px; font: inherit; font-size: 16px; color: var(--blue); }
+.download-controls .button { width: auto; min-height: 44px; padding: 11px 16px; justify-content: center; cursor: pointer; }
+.download-controls .button:disabled { opacity: .65; cursor: wait; }
+#download-status { margin-bottom: 0; }
+#download-status:empty { display: none; }
 
 @media (max-width: 480px) {
   body { padding: 32px 22px; }
@@ -97,6 +105,7 @@ a:focus-visible { outline: 3px solid #316a94; outline-offset: 5px; }
   .eyebrow { font-size: 10px; letter-spacing: 1.4px; }
   h1 { letter-spacing: -1.1px; }
   .actions { grid-template-columns: 1fr; gap: 24px; }
+  .download-controls { flex-direction: column; }
 }
 
 @media (max-width: 360px) {
