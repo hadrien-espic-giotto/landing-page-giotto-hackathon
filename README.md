@@ -3,7 +3,7 @@
 Standalone static website, independent of the ARC editor.
 
 - Add rules in `index.html` under “Workshop rules”.
-- The submission button links to the ARC editor’s `submission.html` page.
+- Submissions use two password-protected Tally forms: [Submit JSON](https://tally.so/r/xXeqrv) and [Submit rule description](https://tally.so/r/A7Vgd0).
 - The supplied logo is `logo_oct5.jpeg`; CSS hides its white margins.
 - Preview: `python3 -m http.server 8000`.
 
